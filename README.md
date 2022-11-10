@@ -49,7 +49,7 @@ Transformer 的整体架构如下：
 
 $$
 L(\theta; \mathcal X) = \frac{1}{|\mathcal X|}\sum_{x \in \mathcal X} \log P(x^{u:v} | x^{\setminus u:v}; \theta) 
-= \frac{1}{|\mathcal X|}\log \Pi^{v}_{t=u}P(x^{u:v}_{t}|x^{u:v}\_{<t}, x^{\setminus u:v};\theta)
+= \frac{1}{|\mathcal X|}\log \Pi^{v}\_{t=u}P(x^{u:v}\_{t}|x^{u:v}\_{<t}, x^{\setminus u:v};\theta)
 $$
 
 注: $x^{u:v}$表示以句子位置$u$为起点$v$为终点的片段；$x^{\setminus u:v}$为$x^{u:v}$的修改版本，从$u$到$v$的片段被屏蔽，$0 < u < v < m$ 其中 $m$ 是句子 $x$ 长度。
