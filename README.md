@@ -48,7 +48,10 @@ Transformer 的整体架构如下：
 给定一个未配对的源句子 $x ∈ \mathcal X$，MASS通过被屏蔽的序列 $x^{\setminus u:v}$ 作为输入来预测句子片段 $x^{u:v}$ 以预训练序列到序列模型。目标函数为一极大似然函数：
 
 ```math
-L(\theta; \mathcal X) = \frac{1}{|\mathcal X|} \sum_{x \in \mathcal X} \log P(x^{u:v} | x^{\setminus u:v}; \theta) = \frac{1}{|\mathcal X|} \log \Pi^{v}_{t=u} P(x^{u:v}_{t}|x^{u:v}_{<t}, x^{\setminus u:v};\theta)
+L(\theta; \mathcal X) = \frac{1}{|\mathcal X|} \sum_{x \in \mathcal X}
+```
+```math
+ \log P(x^{u:v} | x^{\setminus u:v}; \theta) = \frac{1}{|\mathcal X|} \log \Pi^{v}_{t=u} P(x^{u:v}_{t}|x^{u:v}_{<t}, x^{\setminus u:v};\theta)
 ```
 
 注: $x^{u:v}$ 表示以句子位置 $u$ 为起点 $v$ 为终点的片段； $x^{\setminus u:v}$ 为 $x^{u:v}$ 的修改版本，从 $u$ 到 $v$ 的片段被屏蔽， $0 < u < v < m$ 其中 $m$ 是句子 $x$ 长度。
