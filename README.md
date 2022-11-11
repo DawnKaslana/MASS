@@ -56,7 +56,7 @@ P(x^{u:v}_{t}|x^{u:v}_{<t}, x^{\setminus u:v};\theta)
 ```
 
 ```math
-P(x^{u:v}_{t}|x^{u:v}_{<t})
+P(x^{u:v}_{t}|x^{u:v}_{\textless t}, x^{\setminus u:v};\theta)
 ```
 
 注: $x^{u:v}$ 表示以句子位置 $u$ 为起点 $v$ 为终点的片段； $x^{\setminus u:v}$ 为 $x^{u:v}$ 的修改版本，从 $u$ 到 $v$ 的片段被屏蔽， $0 < u < v < m$ 其中 $m$ 是句子 $x$ 长度。
