@@ -2,7 +2,7 @@
 ## 1 模型简介
 微软亚洲研究院于2019在ICML发表《MASS: Masked Sequence to Sequence Pre-training for Language Generation》，其借鑑了Bert的Masked Language Model预训练任务，提出了MAsked Sequence to Sequence Pre-training（MASS）模型，为自然语言生成任务联合预训练编码器和解码器。
 
-MASS的编码器-解码器结构示例，图中“_”表示被屏蔽的词。
+MASS的编码器-解码器结构示例，图中“\_”表示被屏蔽的词。
 
 <center>
 <img src='https://i.imgur.com/Jvhm0Dx.png' width='600px'>
