@@ -4,9 +4,9 @@
 
 MASS的编码器-解码器结构示例，图中“\_”表示被屏蔽的词。
 
-<center>
+<div align=center>
 <img src='https://i.imgur.com/Jvhm0Dx.png' width='600px'>
-</center>
+</div>
 
 编码器： 以被随机屏蔽掉连续片段的句子作为输入，BERT的做法是随机屏蔽掉15%的词，而MASS为了解决编码与解码之间的平衡，做法为屏蔽掉句子总长50%的片段。模型中使用特殊符号 $[\mathbb M]$ 替换连续的单词来屏蔽片段，起始位置是随机的，且被选中的token有80%的概率是正常的 $[\mathbb M]$ token，10%的概率是被随机token替换，10%的概率保持原来的token。以上图为例，其中输入序列有8个单词，片段 $x_3-x_6$ 被屏蔽掉。
 
@@ -34,9 +34,9 @@ MASS预训练有以下几大优势：
 
 Transformer 的整体架构如下：
 
-<center>
+<div align=center>
 <img src='https://i.imgur.com/ooO7ULP.png' width='400px'>
-</center>
+</div>
 
 - 编码器和解码器分别由 $N=6$ 个相同的编码器/解码器层组成。
 - 在 Transformer 架构的左半部分，编码器的任务是将输入序列映射到一系列连续表示，然后将其馈送到解码器。
