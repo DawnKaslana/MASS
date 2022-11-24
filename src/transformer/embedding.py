@@ -77,4 +77,5 @@ class EmbeddingLookup(nn.Cell):
             output_for_reshape = self.gather(self.embedding_table, flat_ids, 0)
 
         output = self.reshape(output_for_reshape, (_batch_size, _max_len, self.embedding_dim))
-        return output, self.embedding_table #self.embedding_table.value()
+        #return output, self.embedding_table.value()
+        return output, self.embedding_table

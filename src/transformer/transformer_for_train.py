@@ -297,5 +297,5 @@ class TransformerTrainOneStepWithLossScaleCell(nn.TrainOneStepWithLossScaleCell)
         overflow = self.process_loss_scale(cond)
         if not overflow:
             self.optimizer(grads)
-
-        return (loss, cond, scaling_sens) #scaling_sens.value()
+        # return (loss, cond, scaling_sens.value())
+        return (loss, cond, scaling_sens)
