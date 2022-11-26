@@ -3,6 +3,5 @@ jieba
 numpy
 subword-nmt
 files2rouge
-tensorflow
 pyyaml
 rouge
